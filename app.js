@@ -11,10 +11,9 @@ if (PORT == null || PORT == "") {
 
 
 
-app.get('/', (req, res) => {
-    res.send("My First Heroku Deployment");
+app.get('/', (req, res) => {    
     mongoose.connect('mongodb://mukesh:manan%401990@ds255917.mlab.com:55917/practicse', { useNewUrlParser: true }).then(()=>{
-        console.log("Connected Successfully");
+        res.send("My First Heroku Deployment with mongoose");
     });
 });
 
